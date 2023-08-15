@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OCEANUS</title>
+    <title>{{title}}</title>
     <link href="{{ url_for('static', filename = 'https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap') }}" rel="stylesheet"> <!-- https://fonts.google.com/ -->
     <link rel="stylesheet" href="{{ url_for('static', filename = 'fontawesome/css/all.min.css') }}"> <!-- https://fontawesome.com/ -->
     <link rel="stylesheet" href="{{ url_for('static', filename = 'css/magnific-popup.css') }}"> 
@@ -66,11 +66,15 @@
                 <i class="fas fa-times"></i>
             </a>
             <div class="tm-row tm-intro-row">
-                <img src="{{ url_for('static', filename = 'img/intro.jpg') }}" alt="Image" class="tm-intro-img">
                 <div class="tm-col tm-bg-white tm-intro-pad">
                     <h2 class="tm-color-primary tm-page-title">OCEANUS Introduction</h2>
                     <div class="tm-row tm-content-row">
                         <div class="tm-col-6 tm-intro-col-l">
+                            {% for member in team %}
+                            <h4>
+                                {{member}}
+                            </h4>
+                            {% endfor %}
                             <p>
                               We are a group who wants to employ technology to protect the marine ecosystem. We created
                             a <span style="color: rgb(9, 160, 160); font-style: italic; font-weight: bold;">smart marine buoy </span> that can do a veriety of things to help save the ocean, including: </p>
