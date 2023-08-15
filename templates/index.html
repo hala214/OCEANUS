@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OCEANUS</title>
+    <link href="{{ url_for('static', filename = 'https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap') }}" rel="stylesheet"> <!-- https://fonts.google.com/ -->
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'fontawesome/css/all.min.css') }}"> <!-- https://fontawesome.com/ -->
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/magnific-popup.css') }}"> 
+    <link rel="stylesheet" href="{{ url_for('static', filename = 'css/templatemo-ocean-vibes.css') }}"> 
+
+</head>
+<body>
+    <header class="tm-site-header">
+        <h1 class="tm-mt-0 tm-mb-15"><span class="tm-color-primary">OCEANUS</span> </h1>
+        <em class="tm-tagline tm-color-light-gray">Ocean Environment And Navigation Utility System</em>
+    </header>
+
+    <!-- Video banner 400 px height -->
+    <div id="tm-video-container">
+        <video autoplay muted loop id="tm-video">
+            <source src="{{ url_for('static', filename = 'video/ocean-sea-wave-video.mp4') }}" type="video/mp4">
+        </video>  
+        <i id="tm-video-control-button" class="fas fa-pause"></i>
+    </div>
+    <div class="tm-container">
+        <nav class="tm-main-nav">
+            <ul id="inline-popups">
+                <li class="tm-nav-item">
+                    <a href="#intro" data-effect="mfp-move-from-top" class="tm-nav-link">
+                        Introduction
+                        <i class="fas fa-3x fa-water"></i>
+                    </a>                
+                </li>
+                <li class="tm-nav-item">
+                    <a href="#gallery" data-effect="mfp-move-from-top" class="tm-nav-link" id="tm-gallery-link">
+                        Team
+                        <i class="far fa-3x fa-images"></i>
+                    </a>
+                </li>
+                <li class="tm-nav-item">
+                    <a href="#testimonials" data-effect="mfp-move-from-top" class="tm-nav-link">
+                        Testimonials
+                        <i class="far fa-3x fa-smile"></i>
+                    </a>
+                </li>
+                <li class="tm-nav-item">
+                    <a href="#about" data-effect="mfp-move-from-top" class="tm-nav-link">
+                        mission and vission
+                        <i class="fas fa-3x fa-tint"></i>
+                    </a>
+                </li>
+                <li class="tm-nav-item">
+                    <a href="#contact" data-effect="mfp-move-from-top" class="tm-nav-link">
+                        Contact us
+                        <i class="far fa-3x fa-comments"></i>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Popup itself -->
+        <div id="intro" class="popup mfp-with-anim mfp-hide tm-bg-gray">
+            <a href="#" class="tm-close-popup">
+                return home
+                <i class="fas fa-times"></i>
+            </a>
+            <div class="tm-row tm-intro-row">
+                <img src="{{ url_for('static', filename = 'img/intro.jpg') }}" alt="Image" class="tm-intro-img">
+                <div class="tm-col tm-bg-white tm-intro-pad">
+                    <h2 class="tm-color-primary tm-page-title">OCEANUS Introduction</h2>
+                    <div class="tm-row tm-content-row">
+                        <div class="tm-col-6 tm-intro-col-l">
+                            <p>
+                              We are a group who wants to employ technology to protect the marine ecosystem. We created
+                            a <span style="color: rgb(9, 160, 160); font-style: italic; font-weight: bold;">smart marine buoy </span> that can do a veriety of things to help save the ocean, including: </p>
+                            <p> 1. Identify and protect endangered species from fishermen .
+                            </p>
+                             <p>2. Detect and avoid cable damage caused by ship anchores.
+                             </p>
+                            <p class="tm-mb-0">
+                             3. Track and identify illegal ships that enter prohibited zones.
+                             <p class="tm-mb-0">
+                             4. It can predict the weather and ocean currents using a sensor.
+                            </p>
+                             *Our marine buoy is powered by solar energy and wave currents 
+                            </p>
+                        </div>
+                        <div class="tm-col-6">
+                            <p>
+                              As our future plans it will report illegal rubbish dumping in the water
+                            </p>
+                            <p>
+                              And our marine buoy will communicate with other buoys to track down the illegal ships, and report authorities ,sea and oceans cleaning robots, and workers  
+                            </p>
+                            <p class="tm-mb-80">
+                                We have a website that shows all the data from the buoys in user friendly way.
+                            </p>
+                            <p class="tm-mb-80">
+                                Our project aims to use technology to preserve the marine environment for future generations .Join us in our mission to save the ocean!.
+
+
+                            </p>
+                            <div class="tm-text-center">
+                                <a href="#" class="tm-btn tm-btn-primary mfp-prevent-close tm-btn-next">
+                                    Next Page
+                                </a>
+                            </div>                            
+                        </div>
+                    </div>
+                </div>                
+            </div> 
+        </div>
+        <div id="gallery" class="popup mfp-with-anim mfp-hide tm-bg-gray">
+            <a href="#" class="tm-close-popup">
+                return home
+                <i class="fas fa-times"></i>
+            </a>
+            <div class="tm-row tm-gallery-row">
+                <div class="tm-gallery">
+                    <div class="tm-gallery-container">                        
+                        <figure class="effect-chico tm-gallery-item portrait">
+
+                        </figure>
+                        <figure class="effect-chico tm-gallery-item animal">
+                            <img src="{{ url_for('static', filename = 'img/gallery/hala.jpg') }}" alt="Image"/>
+                            <figcaption>
+                                <p>Hala Kharouf</p>							
+                            </figcaption>			
+
+                        </figure>
+                        <figure class="effect-chico tm-gallery-item nature">
+                            <img src="{{ url_for('static', filename = 'img/gallery/aya.jpg') }}" alt="Image" style="margin-top: -70px;"/>
+                            <figcaption>
+                                <p>Aya Ghbeish</p>							
+                            </figcaption>		
+
+
+                        </figure>               
+
+                        <figure class="effect-chico tm-gallery-item building" >
+                            <img src="{{ url_for('static', filename = 'img/gallery/zaina.jpg') }}" alt="Image" />
+                            <figcaption>
+                                <p>Zaina Musleh</p>							
+                            </figcaption>			
+                        </figure>
+
+                        </figure>
+                        <figure class="effect-chico tm-gallery-item portrait">
+                            <img src="{{ url_for('static', filename = 'img/gallery/cow.PNG') }}" alt="Image" />
+                            <figcaption>
+                                <p>Us Together</p>							
+                            </figcaption>			
+                        </figure>
+
+
+
+                        </figure>                
+                    </div>
+                </div>
+                <!-- Gallery navigation and description -->
+                <div class="tm-col tm-gallery-right">
+                    <h2 class="tm-color-primary tm-mt-35 tm-page-title">Us</h2>
+                    <div class="tm-gallery-right-inner">
+                        <ul class="tm-gallery-links">
+                            <li>
+                                <a href="#" class="active tm-gallery-link" data-filter="*">
+                                    <i class="fas fa-layer-group tm-gallery-link-icon"></i>
+                                    All
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="tm-gallery-link" data-filter="portrait">
+                                    <i class="fas fa-portrait tm-gallery-link-icon"></i>
+                                    Togeher
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="tm-gallery-link" data-filter="nature">
+                                    <i class="fas fa-portrait tm-gallery-link-icon"></i>
+                                    Aya
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="tm-gallery-link" data-filter="animal">
+                                    <i class="fas fa-portrait tm-gallery-link-icon"></i>
+                                    Hala
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="tm-gallery-link" data-filter="building">
+                                    <i class="fas fa-portrait tm-gallery-link-icon"></i>
+                                    Zaina
+                                </a>
+                            </li>
+                        </ul>
+                        <p>
+                            Hello There!
+                        </p>
+                        <p>
+                            This is our "get to know us",
+                            we would love for you to get to know us and learn 
+                            more about our intrests and us as indivisuals coming
+                            together to complete this project
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div> </div>
+
+        <div id="testimonials" class="popup mfp-with-anim mfp-hide tm-bg-gray">
+            <a href="#" class="tm-close-popup">
+                return home
+                <i class="fas fa-times"></i>
+            </a>
+            <div class="tm-testimonials-inner">
+                <h2 class="tm-color-gray tm-testimonial-col tm-page-title">Testimonials</h2>
+                <div class="tm-row tm-testimonial-row">                
+                    <div class="tm-col tm-testimonial-col">
+                        <blockquote class="tm-mb-50">
+                            <p>
+                                "These high-tech weather instruments produce quality marine environment observations that are used to enhance predictions to changes in weather." by <span class="tm-color-primary">Forbes</span>
+                            </p>
+                        </blockquote>
+                        <em class="tm-mb-30 tm-color-light-gray">
+                            You may support us by telling your friends
+                            about our TemplateMo site. Feel free to 
+                            contact us if you have anything to ask.
+                        </em>
+                        <blockquote class="tm-mb-50">
+                            <p>
+                                "The ocean is an unpredictable place: sometimes it's windy and calm like a mirror; sometimes it's choppy and roaring like thunder. Therefore, the presence of marine buoys is crucial in providing valuable information about weather and sea conditions." by <span class="tm-color-primary">Boomarine</span>
+                            </p>
+                        </blockquote>
+                        
+                    </div>
+                    <div class="tm-col tm-testimonial-col tm-testimonial-col-2">
+                        <img src="{{ url_for('static', filename = 'https://i.pinimg.com/564x/d6/97/13/d69713a54c9224188e31ff5c16c81046.jpg') }}" alt="Image" class="tm-mb-30">
+                        <blockquote>
+                            <p>
+                                "The benefits of buoy data are widespread... In fact, ocean observing systems, like the weather buoy that acted as a safe haven in the aforementioned rescue, yield many benefits that are interconnected at local, regional, national, and global scales " by <span class="tm-color-primary">NOAA</span>
+                            </p>
+                        </blockquote>
+                        
+                        <img>
+                     
+                        <div class="tm-text-center">
+                            <a href="#" class="tm-btn tm-btn-primary mfp-prevent-close tm-btn-contact">
+                                Contact Us
+                            </a>
+                        </div>                 
+                    </div>
+                    <div class="tm-col tm-testimonial-col tm-testimonial-col-2">
+                        <blockquote class="tm-mb-50">
+                            <p>
+                                "Thought processes have driven the invention of new instruments and methods for the exploration of the sea. This evolution of instruments and technology has been a continuous process, and the development of new instruments and techniques will continue to be driven by the need to answer new questions." by <span class="tm-color-primary">NOAA Office of Ocean Exploration and Research b</span>
+                            </p>
+                        </blockquote>  
+                       
+                        <img src="{{ url_for('static', filename = 'https://i.pinimg.com/564x/19/39/95/193995d9efdc96a775ad5841779ddb30.jpg') }}" alt="Image" class="tm-mt-35">
+                    </div>
+                </div>
+            </div>            
+        </div>
+
+        <div id="about" class="popup mfp-with-anim mfp-hide tm-bg-gray">
+            <a href="#" class="tm-close-popup">
+                return home
+                <i class="fas fa-times"></i>
+            </a>
+            <h2 class="tm-color-primary tm-about-col tm-mb-40 tm-page-title">Our mission , Our vission.</h2>
+            <div class="tm-row tm-about-row">
+                <div class="tm-col tm-about-col tm-about-left">                    
+                    <img src="https://i.pinimg.com/564x/1a/a7/0a/1aa70a7aa5f9fc459a5263fb04b7f363.jpg" alt="Image" class="tm-mb-30">
+                    <p class="tm-mb-40"> <span style="color: rgb(0, 166, 255);">Our mission:</span>
+                        Accidents can happen at sea and in oceans due to things like ships crashing, getting stuck on reefs, or spilling oil. These accidents often come from mistakes, bad weather, or equipment problems. These incidents can cause harm to people, harm the environment, and cost a lot of money. It's important to be careful, use good technology, and have plans in place to handle accidents and keep the oceans safe.
+                        
+                    </p>
+                    <p class="tm-mb-40">
+                        Our marine buoy project comes with aligns to solve modern problems , located in our ocean and seas affecting our technology ,ships and cables , with this project we aim to better the conditions surrounding these issues for a brighter future that supports our connection over the sea and the sea life .
+                    </p>
+                </div>
+                <div class="tm-col tm-about-col">
+                    <p class="tm-mb-40">
+                        Under sea cables are vital for global communication and internet connectivity as they carry more than 95% of the world’s data traffic , however through research our team discovered that in the past years these cables were harmed to due to vulnerabilities to physical and digital threats one of the primary causes to this type of damage was by commercial fishing and shipping activities 
+                    </p>
+                    <p class="tm-mb-40"><span style="color: rgb(0, 166, 255);">The importance of OCEANUS: </span>
+                        <p>1-	Protect cables from damaging by detecting the location of this area ,stopping ships from entering this area by showing signals of no entry .</p>
+                        <p>2-	Protect the rare species from the fishermen and alert them that this is a banned area and the fishing is not allowed.</p>
+                        <p>3-	Determine the ships (the legal and illegal ships ) and sending the data of them to the website.</p>
+                        <p>4-	Measures the humidity and temperature using sensors and send the data to the website .</p>
+                        
+                    </p>
+                    <p class="tm-mb-40">
+                If you need a working HTML contact form, 
+                please visit our <a rel="nofollow" href="https://templatemo.com/contact" target="_parent">contact page</a>. </p>
+                    <a href="#" class="tm-btn tm-btn-primary mfp-prevent-close tm-btn-contact tm-mb-40">
+                        Contact Us
+                    </a>
+                </div>               
+            </div>
+        </div>
+
+        <div id="contact" class="popup mfp-with-anim mfp-hide tm-bg-gray">
+
+                        <a href="#" class="tm-close-popup">
+                            return home
+                            <i class="fas fa-times"></i>
+                        </a>
+                        <h2 class="tm-contact-col tm-color-primary tm-page-title tm-mb-40">Contact Us</h2>
+                        <div class="tm-row tm-contact-row">
+                            <div class="tm-col tm-contact-col">
+                            
+                                <form id="contact-form" action="" method="POST" class="tm-contact-form">
+                                    <div class="form-group">
+                                        <input type="text" name="name" class="form-control rounded-0" placeholder="Full Name" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="email" name="email" class="form-control rounded-0" placeholder="Email" required />
+                                    </div>
+                                    <div class="form-group">
+                                        <select class="form-control" id="contact-select" name="inquiry">
+                                            <option value="-">Subject</option>
+                                            <option value="sales">Sales &amp; Marketing</option>
+                                            <option value="creative">Creative Design</option>
+                                            <option value="uiux">UI / UX</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea rows="8" name="message" class="form-control rounded-0" placeholder="Message" required=></textarea>
+                                    </div>
+            
+                                    <div class="form-group tm-text-right">
+                                        <button type="submit" class="tm-btn tm-btn-primary">Send it now</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="tm-col tm-contact-col tm-contact-col-r">
+                                <!-- Map -->
+                                <div class="mapouter tm-mb-40">
+                                    <div class="gmap_canvas">
+                                        <iframe width="100%" height="520" id="gmap_canvas"
+                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13547.574259579005!2d35.195376917382816!3d31.909489128088968!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x151d2aa3b610e4a7%3A0x2d93533db9436331!2sW675%2BM4G%2C%20Ramallah!5e0!3m2!1sen!2s!4v1692094390267!5m2!1sen!2s"
+                                            frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                                    </div>
+                                </div>
+            
+                               
+            
+                                <!-- Links -->
+                                <ul class="tm-contact-links">
+                                    <li>
+                                        <a href="tel:983-020-0456">
+                                            <i class="fas fa-phone tm-contact-link-icon"></i>
+                                            Tel: 983-020-0456
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="mailto:oceanuscompanyps@gmail.com">
+                                            <i class="fas fa-at tm-contact-link-icon"></i>
+                                            Email: oceanuscompanyps@gmail.com
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://oceanus-project.netlify.app/#">
+                                            <i class="fas fa-link tm-contact-link-icon"></i>
+                                            URL: https://oceanus-project.netlify
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                    <!-- Address -->
+                    <!-- <address class="tm-mb-40">
+                        110-220 Nam vel ultricies mauris,<br>
+                        Et gravida eros 10220
+                    </address>
+
+                     Links -->
+                        <!-- </div>
+                    <div class="tm-col tm-contact-col tm-contact-col-r">
+
+                            <li>
+                                <a href="tel:0100200340">
+                                    <i class="fas fa-phone tm-contact-link-icon"></i>
+                                    Tel: 983-020-0456
+
+                                <a href="mailto:oceanuscompanyps@gmail.com">
+                                    <i class="fas fa-at tm-contact-link-icon"></i>
+                                    Email: oceanuscompanyps@gmail.com
+
+                                <a href="https://oceanus-project.netlify.app/#">
+                                    <i class="fas fa-link tm-contact-link-icon"></i>
+                                    URL: https://oceanus-project.netlify
+                            </a> -->
+                            
+
+    <footer class="tm-footer">
+        <span>Copyright &copy; 2023  OCEANUS</span>
+        <span>Web Designed by 
+        <a href="https://templatemo.com" title="free website templates" target="_parent" rel="nofollow">TemplateMo</a></span>
+</footer>
+
+        <script src="{{ url_for('static', filename = 'js/jquery-3.4.1.min.js') }}"></script>
+        <script src="{{ url_for('static', filename = 'js/imagesloaded.pkgd.min.js') }}"></script>
+        <script src="{{ url_for('static', filename = 'js/isotope.pkgd.min.js') }}"></script>
+        <script src="{{ url_for('static', filename = 'js/jquery.magnific-popup.min.js') }}"></script>    
+        <script src="{{ url_for('static', filename = 'js/templatemo-script.js') }}"></script>
+    </body>
+</html>
