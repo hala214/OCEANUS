@@ -1,10 +1,11 @@
 from flask import Flask, render_template
-
 app = Flask(__name__)
 
-@app.route("/dashboard")
-def dashboard():
-    return render_template("index.html")
+project_name = "OCEANUS"
+@app.route("/")
 
-if __name__ == "__name__":
-    app.run(debug=True)
+def index():
+   return render_template("index.html", title=project_name)
+
+if __name__ == '__main__':
+   app.run(debug = True)
