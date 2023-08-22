@@ -20,3 +20,4 @@ def initialize_db():
 def intialize_auth():
     firebase_auth = firebase.auth()
     return firebase_auth
+
