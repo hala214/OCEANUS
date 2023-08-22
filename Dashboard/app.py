@@ -30,7 +30,7 @@ def dashboard():
 
 @app.route("/charts")
 def charts():
-    return render_template("/chartjs.html")
+    return render_template("chartjs.html")
 
 @app.route("/login", methods=['POST', 'GET'])
 def login():
@@ -41,8 +41,7 @@ def login():
         user_password = request.form['exampleInputPassword1']
         global user_data
         
-        user_data = {
-        "email": user_email}
+        user_data = {"email": user_email}
 
         if valid_login(user_email, user_password):
             return redirect("/dashboard")
