@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="{{ url_for('static', filename = 'css/vertical-layout-light/style.css') }}">
   <!-- endinject -->
   <!-- Changing: Logo image -->
-  <link rel="shortcut icon" href="{{ url_for('static', filename = 'images/favicon.png') }}" />
+  <link rel="shortcut icon" href="{{ url_for('static', filename = 'images/logo.png') }}" />
 </head>
 <body>
   <div class="container-scroller">
@@ -45,10 +45,10 @@
         </div>
         <div>
           <a class="navbar-brand brand-logo" href="/">
-            <img src="images/logo.svg" alt="logo" />
+            <img src="{{ url_for('static', filename = 'images/final-logo.png') }}" alt="logo" />
           </a>
           <a class="navbar-brand brand-logo-mini" href="/">
-            <img src="images/logo-mini.svg" alt="logo" />
+            <img src="{{ url_for('static', filename = 'images/final-logo.png') }}" alt="logo" />
           </a>
         </div>
       </div>
