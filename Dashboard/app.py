@@ -1,5 +1,6 @@
-from flask import Flask, render_template, request, redirect
+from flask import Flask, jsonify, render_template, request, redirect
 import oceanus_db
+import rpi_mock
 
 app = Flask(__name__)
 
@@ -20,6 +21,7 @@ def valid_login(email, password):
     except:
         return False
 
+
 @app.route("/")
 @app.route("/dashboard")
 def dashboard():
@@ -31,6 +33,21 @@ def dashboard():
 @app.route("/charts")
 def charts():
     return render_template("chartjs.html")
+
+@app.route('/get_data')
+def get_data():
+    data = {'Legal': 10,
+            'Illegal': 5}
+    return jsonify(data)
+
+@app.route("/tables")
+def tables():
+    i = 0
+    ships = []
+    allowed_ships = ["Bulk Carrier", "Passenger Ships"]
+    for i in range(5):
+        ships.append(rpi_mock.check_ships())
+    return render_template("table.html", ships=ships, allowed_ships=allowed_ships)
 
 @app.route("/login", methods=['POST', 'GET'])
 def login():

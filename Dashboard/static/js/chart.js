@@ -78,9 +78,18 @@ $(function() {
     }
 
   };
+  function fetchData(url) {
+    return fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        console.log("data" + data)
+        return data;
+      });
+  }
   var doughnutPieData = {
     datasets: [{
-      data: [30, 40, 30],
+      data: [3, 7],
+      // data: fetchData("http://localhost:5000/get_data"),
       backgroundColor: [
         'rgba(255, 99, 132, 0.5)',
         'rgba(54, 162, 235, 0.5)',
@@ -101,9 +110,8 @@ $(function() {
 
     // These labels appear in the legend and in the tooltips when hovering different arcs
     labels: [
-      'Pink',
-      'Blue',
-      'Yellow',
+      'Illegal',
+      'Legal',
     ]
   };
   var doughnutPieOptions = {

@@ -22,7 +22,7 @@
   <link rel="stylesheet" href="{{ url_for('static', filename = 'css/vertical-layout-light/style.css') }}">
   <!-- endinject -->
   <!-- Changing: Logo image -->
-  <link rel="shortcut icon" href="{{ url_for('static', filename = 'images/logo.png') }}" />
+  <link rel="shortcut icon" href="{{ url_for('static', filename = 'images/favicon.png') }}" />
 </head>
 <body>
   <div class="container-scroller">
@@ -44,12 +44,12 @@
           </button>
         </div>
         <div>
-          <a class="navbar-brand brand-logo" href="/">
-            <img src="{{ url_for('static', filename = 'images/final-logo.png') }}" alt="logo" />
+          <a class="brand-logo" href="/">
+            <img src="{{ url_for('static', filename = 'images/favicon.png') }}" style="height: 110px; width: 75px;" alt="logo" />
           </a>
-          <a class="navbar-brand brand-logo-mini" href="/">
-            <img src="{{ url_for('static', filename = 'images/final-logo.png') }}" alt="logo" />
-          </a>
+          <!-- <a class="navbar-brand brand-logo" href="/">
+            <img src="{{ url_for('static', filename = 'images/favicon.png') }}" alt="logo" />
+          </a> -->
         </div>
       </div>
       <div class="navbar-menu-wrapper d-flex align-items-top"> 
@@ -173,9 +173,9 @@
       <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">
+            <a class="nav-link" href="/">
               <i class="mdi mdi-grid-large menu-icon"></i>
-              <span class="menu-title">Dashboard</span>
+              <span class="menu-title">Main</span>
             </a>
           </li>
           <li class="nav-item nav-category">Data Sections</li>
@@ -187,7 +187,7 @@
             </a>
             <div class="collapse" id="charts">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="/charts">ChartJs</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/charts">Oceanus Charts</a></li>
               </ul>
             </div>
           </li>
@@ -199,7 +199,7 @@
             </a>
             <div class="collapse" id="tables">
               <ul class="nav flex-column sub-menu">
-                <li class="nav-item"> <a class="nav-link" href="pages/tables/basic-table.html">Basic table</a></li>
+                <li class="nav-item"> <a class="nav-link" href="/tables">Oceanus Tables</a></li>
               </ul>
             </div>
           </li>
