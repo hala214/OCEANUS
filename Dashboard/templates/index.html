@@ -11,11 +11,13 @@
   <link rel="stylesheet" href="{{ url_for('static', filename = 'vendors/mdi/css/materialdesignicons.min.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename = 'vendors/ti-icons/css/themify-icons.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename = 'vendors/typicons/typicons.css') }}">
-  <link rel="stylesheet" href="{{ url_for('static', filename = 'vendors/simple-line-icons/css/simple-line-icons.css') }}">
+  <link rel="stylesheet"
+    href="{{ url_for('static', filename = 'vendors/simple-line-icons/css/simple-line-icons.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename = 'vendors/css/vendor.bundle.base.css') }}">
   <!-- endinject -->
   <!-- Plugin css for this page -->
-  <link rel="stylesheet" href="{{ url_for('static', filename = 'vendors/datatables.net-bs4/dataTables.bootstrap4.css') }}">
+  <link rel="stylesheet"
+    href="{{ url_for('static', filename = 'vendors/datatables.net-bs4/dataTables.bootstrap4.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename = 'js/select.dataTables.min.css') }}">
   <!-- End plugin css for this page -->
   <!-- inject:css -->
@@ -24,13 +26,15 @@
   <!-- Changing: Logo image -->
   <link rel="shortcut icon" href="{{ url_for('static', filename = 'images/favicon.png') }}" />
 </head>
+
 <body>
   <div class="container-scroller">
     <div class="row p-0 m-0 proBanner" id="proBanner">
       <div class="col-md-12 p-0 m-0">
         <div class="card-body card-body-padding d-flex align-items-center justify-content-between">
           <div class="d-flex align-items-center justify-content-between">
-            <a href="https://oceanus-project.netlify.app/" target="_blank"><i class="mdi mdi-home me-3 text-white"></i></a>
+            <a href="https://oceanus-project.netlify.app/" target="_blank"><i
+                class="mdi mdi-home me-3 text-white"></i></a>
           </div>
         </div>
       </div>
@@ -45,14 +49,15 @@
         </div>
         <div>
           <a class="brand-logo" href="/">
-            <img src="{{ url_for('static', filename = 'images/favicon.png') }}" style="height: 110px; width: 75px;" alt="logo" />
+            <img src="{{ url_for('static', filename = 'images/favicon.png') }}" style="height: 110px; width: 75px;"
+              alt="logo" />
           </a>
           <!-- <a class="navbar-brand brand-logo" href="/">
             <img src="{{ url_for('static', filename = 'images/favicon.png') }}" alt="logo" />
           </a> -->
         </div>
       </div>
-      <div class="navbar-menu-wrapper d-flex align-items-top"> 
+      <div class="navbar-menu-wrapper d-flex align-items-top">
         <ul class="navbar-nav">
           <li class="nav-item font-weight-semibold d-none d-lg-block ms-0">
             <h1 class="welcome-text">Welcome to <span class="text-black fw-bold">Oceanus</span></h1>
@@ -82,7 +87,8 @@
               <span class="count"></span>
 
             </a>
-            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0" aria-labelledby="notificationDropdown">
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list pb-0"
+              aria-labelledby="notificationDropdown">
               <a class="dropdown-item py-3 border-bottom">
                 <p class="mb-0 font-weight-medium float-left">You have 4 new notifications </p>
                 <span class="badge badge-pill badge-primary float-right">View all</span>
@@ -118,20 +124,26 @@
           </li>
           <li class="nav-item dropdown d-none d-lg-block user-dropdown">
             <a class="nav-link" id="UserDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
-              <img class="img-xs rounded-circle" src="{{ url_for('static', filename = 'images/faces/face8.jpg') }}" alt="Profile image"> </a>
+              <img class="img-xs rounded-circle" src="{{ url_for('static', filename = 'images/faces/face8.jpg') }}"
+                alt="Profile image"> </a>
             <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="UserDropdown">
               <div class="dropdown-header text-center">
-                <img class="img-md rounded-circle" src="{{ url_for('static', filename = 'images/faces/face8.jpg') }}" alt="Profile image">
+                <img class="img-md rounded-circle" src="{{ url_for('static', filename = 'images/faces/face8.jpg') }}"
+                  alt="Profile image">
                 <p class="mb-1 mt-3 font-weight-semibold">Oceanus User</p>
                 <p class="fw-light text-muted mb-0">{{user_data.email}}</p>
               </div>
-              <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-account-outline text-primary me-2"></i> My Profile</a>
-              <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-help-circle-outline text-primary me-2"></i> FAQ</a>
-              <a class="dropdown-item" href="/login"><i class="dropdown-item-icon mdi mdi-power text-primary me-2"></i>Sign Out</a>
+              <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-account-outline text-primary me-2"></i> My
+                Profile</a>
+              <a class="dropdown-item"><i class="dropdown-item-icon mdi mdi-help-circle-outline text-primary me-2"></i>
+                FAQ</a>
+              <a class="dropdown-item" href="/login"><i
+                  class="dropdown-item-icon mdi mdi-power text-primary me-2"></i>Sign Out</a>
             </div>
           </li>
         </ul>
-        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-bs-toggle="offcanvas">
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+          data-bs-toggle="offcanvas">
           <span class="mdi mdi-menu"></span>
         </button>
       </div>
@@ -144,8 +156,12 @@
         <div id="theme-settings" class="settings-panel">
           <i class="settings-close ti-close"></i>
           <p class="settings-heading">SIDEBAR SKINS</p>
-          <div class="sidebar-bg-options selected" id="sidebar-light-theme"><div class="img-ss rounded-circle bg-light border me-3"></div>Light</div>
-          <div class="sidebar-bg-options" id="sidebar-dark-theme"><div class="img-ss rounded-circle bg-dark border me-3"></div>Dark</div>
+          <div class="sidebar-bg-options selected" id="sidebar-light-theme">
+            <div class="img-ss rounded-circle bg-light border me-3"></div>Light
+          </div>
+          <div class="sidebar-bg-options" id="sidebar-dark-theme">
+            <div class="img-ss rounded-circle bg-dark border me-3"></div>Dark
+          </div>
           <p class="settings-heading mt-2">HEADER SKINS</p>
           <div class="color-tiles mx-0 px-4">
             <div class="tiles success"></div>
@@ -161,10 +177,12 @@
         <i class="settings-close ti-close"></i>
         <ul class="nav nav-tabs border-top" id="setting-panel" role="tablist">
           <li class="nav-item">
-            <a class="nav-link active" id="todo-tab" data-bs-toggle="tab" href="#todo-section" role="tab" aria-controls="todo-section" aria-expanded="true">TO DO LIST</a>
+            <a class="nav-link active" id="todo-tab" data-bs-toggle="tab" href="#todo-section" role="tab"
+              aria-controls="todo-section" aria-expanded="true">TO DO LIST</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" id="chats-tab" data-bs-toggle="tab" href="#chats-section" role="tab" aria-controls="chats-section">CHATS</a>
+            <a class="nav-link" id="chats-tab" data-bs-toggle="tab" href="#chats-section" role="tab"
+              aria-controls="chats-section">CHATS</a>
           </li>
         </ul>
       </div>
@@ -214,7 +232,8 @@
                 <div class="d-sm-flex align-items-center justify-content-between border-bottom">
                   <ul class="nav nav-tabs" role="tablist">
                     <li class="nav-item">
-                      <a class="nav-link active ps-0" id="home-tab" data-bs-toggle="tab" href="#overview" role="tab" aria-controls="overview" aria-selected="true">Overview</a>
+                      <a class="nav-link active ps-0" id="home-tab" data-bs-toggle="tab" href="#overview" role="tab"
+                        aria-controls="overview" aria-selected="true">Overview</a>
                     </li>
                   </ul>
                   <div>
@@ -226,7 +245,7 @@
                   </div>
                 </div>
                 <div class="tab-content tab-content-basic">
-                  <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview"> 
+                  <div class="tab-pane fade show active" id="overview" role="tabpanel" aria-labelledby="overview">
                     <div class="row">
                       <div class="col-sm-12">
                         <div class="statistics-details d-flex align-items-center justify-content-between">
@@ -236,7 +255,7 @@
                           </div>
                           <div>
                             <p class="statistics-title">No. of Ships</p>
-                            <h3 class="rate-percentage">34</h3>
+                            <h3 class="rate-percentage">47</h3>
                           </div>
                           <div>
                             <p class="statistics-title">Illegal Waste Violations</p>
@@ -252,7 +271,7 @@
                           </div>
                         </div>
                       </div>
-                    </div> 
+                    </div>
                     <div class="row">
                       <div class="col-lg-8 d-flex flex-column">
                         <!-- <div class="row flex-grow">
@@ -827,8 +846,10 @@
         <!-- partial:partials/_footer.html -->
         <footer class="footer">
           <div class="d-sm-flex justify-content-center justify-content-sm-between">
-            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block"><a href="https://oceanus-project.netlify.app/" target="_blank"><strong>Oceanus</strong></a></span>
-            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Copyright © 2023. All rights reserved.</span>
+            <span class="text-muted text-center text-sm-left d-block d-sm-inline-block"><a
+                href="https://oceanus-project.netlify.app/" target="_blank"><strong>Oceanus</strong></a></span>
+            <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center">Copyright © 2023. All rights
+              reserved.</span>
           </div>
         </footer>
         <!-- partial -->
@@ -863,4 +884,3 @@
 </body>
 
 </html>
-
