@@ -24,8 +24,8 @@ def intialize_auth():
     return firebase_auth
 
 
-def create_fake_data():
+def create_fake_data(duplications=10):
     db = initialize_db()
     data = {"name": "Palestinian", "timestamp": 1693486552.263934}
-    for i in range(10):
+    for i in range(duplications):
         db.child("Raspberry Pi Data").child("Ships").child(data)
