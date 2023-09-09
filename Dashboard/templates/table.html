@@ -315,6 +315,36 @@
                 </div>
               </div>
             </div>
+            <div class="col-lg-6 grid-margin stretch-card">
+              <div class="card">
+                <div class="card-body">
+                  <h4 class="card-title">Weather Data Table</h4>
+                  <p class="card-description">
+                    This table contains the latest data of weather collected by your buoy.</p>
+                  <div class="table-responsive">
+                    <table class="table table-hover">
+                      <thead>
+                        <tr>
+                          <th>Temperature</th>
+                          <th>Humidity</th>
+                          <th>Time</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {% for dht in dhts %}
+                        <tr>
+                          <td>{{dht.temperature}}</td>
+                          <td>{{dht.humidity}}</td>
+                          <td class="text-secondary"> {{dht.time}} </i></td>
+                        </tr>
+                        {% endfor %}
+                      </tbody>
+                      <!--badge badge-danger-->
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
