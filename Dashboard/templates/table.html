@@ -303,8 +303,10 @@
                           <td class="text-secondary"> {{ship.time}} </i></td>
                           {% if ship.name in allowed_ships %}
                           <td><label class="badge badge-success">Legal</label></td>
-                          {% else %}
+                          {% elif ship.name in not_allowed %}
                           <td><label class="badge badge-danger">Illegal</label></td>
+                          {% else %}
+                          <td><label class="badge badge-success">Safe</label></td>
                           {% endif %}
                         </tr>
                         {% endfor %}

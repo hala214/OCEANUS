@@ -3,14 +3,20 @@ import oceanus_db
 import rpi_mock
 from datetime import datetime
 
+
 app = Flask(__name__)
 
+
 db = oceanus_db.initialize_db()
+
 
 user_email = None
 user_password = None
 
+
 login_visit = False
+
+
 
 
 def valid_login(email, password):
@@ -24,6 +30,8 @@ def valid_login(email, password):
         return False
 
 
+
+
 @app.route("/")
 @app.route("/dashboard")
 def dashboard():
@@ -33,9 +41,13 @@ def dashboard():
         return redirect("/login")
 
 
+
+
 @app.route("/charts")
 def charts():
     return render_template("chartjs.html")
+
+
 
 
 @app.route("/tables")
@@ -46,6 +58,11 @@ def tables():
     ships = []
     weather_data = []
     allowed_ships = ["Passenger Ship", "Fishing Ship"]
+    not_allowed = ["Navile Ship", "Container Ship", "Naval Ship"]
+    allowed_not = ["container", "navy"]
+    allowed = ["passenger", "fishing"]
+
+
     for i in ships_items.each():
         # print(i.val())
         ship_item = i.val()
@@ -56,6 +73,7 @@ def tables():
         formatted_date = date_object.strftime(
             "Date: %Y-%m-%d / Time: %H:%M:%S.%f")[:-4]
         ships.append({"name": f"{ship_name} Ship", "time": formatted_date})
+
 
     for i in weather_items.each():
         weather_item = i.val()
@@ -71,7 +89,10 @@ def tables():
                              "temperature": temperature,
                              "time": formatted_date})
 
-    return render_template("table.html", dhts=weather_data[-20:], allowed_ships=allowed_ships, ships=ships[-20:])
+
+    return render_template("table.html", dhts=weather_data[-20:], not_allowed=not_allowed, allowed_ships=allowed_ships, ships=ships[-20:])
+
+
 
 
 @app.route("/all_ships")
@@ -80,8 +101,15 @@ def all_ships_table():
     firebase_items = db.child("Raspberry Pi Data").child("Ships").get()
     ships = []
     allowed_ships = ["Passenger Ship", "Fishing Ship"]
+    not_allowed= ["Navile Ship", "Container Ship", "Naval Ship"]
+    allowed_not = ["container", "navy"]
+    allowed = ["passenger", "fishing"]
+
+
+   
     for i in firebase_items.each():
-        print(i.val())
+        if  firebase_items in allowed or allowed_not :
+            print(i.val())
         ship_item = i.val()
         ship_name = ship_item["name"].capitalize()
         ship_timestamp = ship_item["timestamp"]
@@ -91,7 +119,10 @@ def all_ships_table():
             "Date: %Y-%m-%d / Time: %H:%M:%S.%f")[:-4]
         ships.append({"name": f"{ship_name} Ship", "time": formatted_date})
 
-    return render_template("table.html", ships=ships[:], allowed_ships=allowed_ships)
+
+    return render_template("table.html", ships=ships[:], not_allowed=not_allowed, allowed_ships=allowed_ships, allowd=allowed, allowed_not=allowed_not)
+
+
 
 
 @app.route("/login", methods=['POST', 'GET'])
@@ -103,14 +134,20 @@ def login():
         user_password = request.form['exampleInputPassword1']
         global user_data
 
+
         user_data = {"email": user_email}
+
 
         if valid_login(user_email, user_password):
             return redirect("/dashboard")
 
+
     return render_template("login.html")
+
+
 
 
 if __name__ == "__main__":
     app.run(debug=True)
     # app.run()
+
