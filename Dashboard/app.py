@@ -121,7 +121,7 @@ def all_ships_table():
         ships.append({"name": f"{ship_name} Ship", "time": formatted_date})
 
 
-    return render_template("table.html", ships=ships[:], not_allowed=not_allowed, allowed_ships=allowed_ships, allowd=allowed, allowed_not=allowed_not)
+    return render_template("allships.html", ships=ships[:], not_allowed=not_allowed, allowed_ships=allowed_ships, allowd=allowed, allowed_not=allowed_not)
 
 
 
