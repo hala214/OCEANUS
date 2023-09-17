@@ -57,10 +57,10 @@ def tables():
     weather_items = db.child("Raspberry Pi Data").child("dht").get()
     ships = []
     weather_data = []
-    allowed_ships = ["Passenger Ship", "Fishing Ship"]
-    not_allowed = ["Navile Ship", "Container Ship", "Naval Ship"]
-    allowed_not = ["container", "navy"]
-    allowed = ["passenger", "fishing"]
+    allowed_ships = ["Passenger Ship", "Naval Ship", "Navile Ship",]
+    not_allowed = [ "Container Ship","Fishing Ship" ]
+    allowed_not = ["container", "fishing",]
+    allowed = ["passenger", "navy"]
 
 
     for i in ships_items.each():
@@ -100,10 +100,11 @@ def all_ships_table():
     i = 0
     firebase_items = db.child("Raspberry Pi Data").child("Ships").get()
     ships = []
-    allowed_ships = ["Passenger Ship", "Fishing Ship"]
-    not_allowed= ["Navile Ship", "Container Ship", "Naval Ship"]
-    allowed_not = ["container", "navy"]
-    allowed = ["passenger", "fishing"]
+    allowed_ships = ["Passenger Ship", "Naval Ship", "Navile Ship",]
+    not_allowed = [ "Container Ship","Fishing Ship" ]
+    allowed_not = ["container", "fishing",]
+    allowed = ["passenger", "navy"]
+
 
 
    
